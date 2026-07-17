@@ -1,3 +1,136 @@
+const skillGroups = [
+  {
+    title: 'Languages',
+    skills: [
+      {
+        name: 'Java',
+        meta: 'Backend',
+        icon: 'https://api.iconify.design/devicon/java.svg',
+      },
+      {
+        name: 'C#',
+        meta: 'Desktop',
+        icon: 'https://api.iconify.design/devicon/csharp.svg',
+      },
+      {
+        name: 'TypeScript',
+        meta: 'Full-stack',
+        icon: 'https://api.iconify.design/devicon/typescript.svg',
+      },
+      {
+        name: 'JavaScript',
+        meta: 'Frontend',
+        icon: 'https://api.iconify.design/devicon/javascript.svg',
+      },
+      {
+        name: 'Python',
+        meta: 'Automation',
+        icon: 'https://api.iconify.design/devicon/python.svg',
+      },
+      {
+        name: 'C++',
+        meta: 'Systems',
+        icon: 'https://api.iconify.design/devicon/cplusplus.svg',
+      },
+      {
+        name: 'SQL',
+        meta: 'Data',
+        icon: 'https://api.iconify.design/vscode-icons/file-type-sql.svg',
+      },
+    ],
+  },
+  {
+    title: 'Frameworks',
+    skills: [
+      {
+        name: 'Spring Boot',
+        meta: 'REST APIs',
+        icon: 'https://api.iconify.design/devicon-plain/spring.svg',
+      },
+      {
+        name: '.NET',
+        meta: 'Enterprise',
+        icon: 'https://api.iconify.design/devicon/dotnetcore.svg',
+      },
+      {
+        name: 'WPF',
+        meta: 'Desktop UI',
+        icon: 'https://api.iconify.design/devicon/dotnetcore.svg',
+      },
+      {
+        name: 'NestJS',
+        meta: 'APIs + jobs',
+        icon: 'https://api.iconify.design/devicon/nestjs.svg',
+      },
+      {
+        name: 'React',
+        meta: 'Frontend UI',
+        icon: 'https://api.iconify.design/devicon/react.svg',
+      },
+      {
+        name: 'JPA',
+        meta: 'Persistence',
+        icon: 'https://api.iconify.design/ls/jpa.svg',
+      },
+      {
+        name: 'Prisma',
+        meta: 'TypeScript ORM',
+        icon: 'https://api.iconify.design/devicon/prisma.svg',
+      },
+    ],
+  },
+  {
+    title: 'Tools',
+    skills: [
+      {
+        name: 'PostgreSQL',
+        meta: 'Database',
+        icon: 'https://api.iconify.design/devicon/postgresql.svg',
+      },
+      {
+        name: 'Supabase',
+        meta: 'Storage',
+        icon: 'https://api.iconify.design/devicon/supabase.svg',
+      },
+      {
+        name: 'Redis',
+        meta: 'Caching',
+        icon: 'https://api.iconify.design/devicon/redis.svg',
+      },
+      {
+        name: 'BullMQ',
+        meta: 'Job queues',
+        icon: 'https://api.iconify.design/devicon/redis.svg',
+      },
+      {
+        name: 'Flyway',
+        meta: 'Migrations',
+        icon: 'https://api.iconify.design/devicon/flyway.svg',
+      },
+      {
+        name: 'Docker',
+        meta: 'Containers',
+        icon: 'https://api.iconify.design/devicon/docker.svg',
+      },
+      {
+        name: 'Git',
+        meta: 'Versioning',
+        icon: 'https://api.iconify.design/devicon/git.svg',
+      },
+      {
+        name: 'WebSockets',
+        meta: 'Real-time',
+        icon: 'https://api.iconify.design/mdi/connection.svg',
+      },
+      {
+        name: 'STOMP',
+        meta: 'Messaging',
+        icon: 'https://api.iconify.design/mdi/message-flash.svg',
+      },
+    ],
+  },
+]
+
 const Skills = () => {
   return (
     <section id="skills" className="section skills">
@@ -6,245 +139,29 @@ const Skills = () => {
           <h2>My technical skills.</h2>
         </div>
         <div className="skills-rows">
-          <article className="skills-row">
-            <h3 className="skills-subtitle">Languages</h3>
-            <div className="skills-items">
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/java.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">Java</p>
-                  <p className="skills-meta">Backend systems</p>
-                </div>
+          {skillGroups.map((group) => (
+            <article className="skills-row" key={group.title}>
+              <h3 className="skills-subtitle">{group.title}</h3>
+              <div className="skills-items">
+                {group.skills.map((skill) => (
+                  <div className="skills-item" key={skill.name}>
+                    <span className="skills-icon" aria-hidden="true">
+                      <img
+                        src={skill.icon}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <div>
+                      <p className="skills-name">{skill.name}</p>
+                      <p className="skills-meta">{skill.meta}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/python.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">Python</p>
-                  <p className="skills-meta">Automation</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon-plain/javascript.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">JavaScript</p>
-                  <p className="skills-meta">Frontend</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/typescript.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">TypeScript</p>
-                  <p className="skills-meta">Typed frontend</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/bxl/c-plus-plus.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">C++</p>
-                  <p className="skills-meta">Systems</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/mysql.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">SQL</p>
-                  <p className="skills-meta">Data modeling</p>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article className="skills-row">
-            <h3 className="skills-subtitle">Frameworks</h3>
-            <div className="skills-items">
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/react.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">React</p>
-                  <p className="skills-meta">Component UI</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon-plain/spring.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">Spring Boot</p>
-                  <p className="skills-meta">REST + services</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/ls/jpa.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">JPA/Hibernate</p>
-                  <p className="skills-meta">ORM</p>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article className="skills-row">
-            <h3 className="skills-subtitle">Tools</h3>
-            <div className="skills-items">
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/postgresql.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">PostgreSQL</p>
-                  <p className="skills-meta">Database</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/redis.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">Redis</p>
-                  <p className="skills-meta">Caching</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/docker.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">Docker</p>
-                  <p className="skills-meta">Containers</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/supabase.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">Supabase</p>
-                  <p className="skills-meta">Auth + data</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/prometheus.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">Prometheus</p>
-                  <p className="skills-meta">Metrics</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/git.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">Git</p>
-                  <p className="skills-meta">Versioning</p>
-                </div>
-              </div>
-              <div className="skills-item">
-                <span className="skills-icon" aria-hidden="true">
-                  <img
-                    src="https://api.iconify.design/devicon/figma.svg"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <div>
-                  <p className="skills-name">Figma</p>
-                  <p className="skills-meta">UI design</p>
-                </div>
-              </div>
-            </div>
-          </article>
+            </article>
+          ))}
         </div>
       </div>
     </section>

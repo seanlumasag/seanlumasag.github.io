@@ -8,9 +8,6 @@ const TerminalCard = () => {
           <span className="dot green" />
         </div>
         <div className="terminal-body">
-          <p>&gt; Sean.location</p>
-          <p className="terminal-accent">&quot;New Jersey, USA&quot;</p>
-          <p>&nbsp;</p>
           <p>&gt; Sean.contact</p>
           <p className="terminal-accent">
             [
@@ -49,7 +46,7 @@ const TerminalCard = () => {
             <span className="terminal-quote">&quot;</span>
             <a
               className="terminal-link"
-              href="/Lumasag_Sean_Resume.pdf"
+              href="/Sean_Lumasag_Resume.pdf"
               target="_blank"
               rel="noreferrer"
             >
@@ -65,7 +62,8 @@ const TerminalCard = () => {
           <p>&nbsp;</p>
           <p>&gt; Sean.languages</p>
           <p className="terminal-warm">
-            [&quot;Java&quot;, &quot;Python&quot;, &quot;JavaScript&quot;]
+            [&quot;Java&quot;, &quot;C#&quot;, &quot;TypeScript&quot;,
+            &quot;Python&quot;]
           </p>
           <p>&nbsp;</p>
         </div>

@@ -3,49 +3,19 @@ import './App.css'
 import { Experience, Hero, Projects, Skills, TerminalCard } from './components'
 
 function App() {
-  const [theme, setTheme] = useState('light')
-
-  useEffect(() => {
+  const [theme, setTheme] = useState(() => {
     const stored = window.localStorage.getItem('theme')
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const initial = stored ?? (prefersDark ? 'dark' : 'light')
-    document.documentElement.dataset.theme = initial
-    setTheme(initial)
-  }, [])
+
+    return stored ?? (prefersDark ? 'dark' : 'light')
+  })
 
   useEffect(() => {
-    const selector =
-      '.section > *, .project-card > *, .terminal-card > *, .projects-header, .projects-inner > *, .skills-row > *, .skills-item'
-    const elements = Array.from(document.querySelectorAll(selector))
-
-    elements.forEach((el) => el.classList.add('reveal'))
-
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const target = entry.target
-            target.classList.add('reveal-visible')
-
-            observer.unobserve(target)
-          }
-        })
-      },
-      { threshold: 0.2 }
-    )
-
-    elements.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
+    document.documentElement.dataset.theme = theme
+  }, [theme])
 
   const toggleTheme = () => {
     const next = theme === 'dark' ? 'light' : 'dark'
-    document.documentElement.dataset.theme = next
     window.localStorage.setItem('theme', next)
     setTheme(next)
   }
