@@ -46,7 +46,7 @@ const TerminalCard = () => {
             <span className="terminal-quote">&quot;</span>
             <a
               className="terminal-link"
-              href="/Sean_Lumasag_Resume.pdf"
+              href="/resume/"
               target="_blank"
               rel="noreferrer"
             >
