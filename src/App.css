@@ -172,7 +172,7 @@
   background: var(--card-bg-strong);
   padding-top: 0;
   padding-bottom: 0;
-  margin: 0 calc(50% - 50vw);
+  margin-inline: calc(50% - 50vw);
 }
 
 .portfolio-section {
@@ -197,7 +197,7 @@
   background: var(--card-bg-strong);
   padding-top: 0;
   padding-bottom: 0;
-  margin: 0 calc(50% - 50vw);
+  margin-inline: calc(50% - 50vw);
 }
 
 .skills-inner {
