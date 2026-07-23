@@ -8,7 +8,7 @@ const TerminalCard = () => {
           <span className="dot green" />
         </div>
         <div className="terminal-body">
-          <p>&gt; Sean.contact</p>
+          <p>&gt; sean.contact</p>
           <p className="terminal-accent">
             [
             <span className="terminal-quote">&quot;</span>
@@ -41,7 +41,7 @@ const TerminalCard = () => {
             ]
           </p>
           <p>&nbsp;</p>
-          <p>&gt; Sean.resume</p>
+          <p>&gt; sean.resume</p>
           <p className="terminal-accent">
             <span className="terminal-quote">&quot;</span>
             <a
@@ -55,12 +55,12 @@ const TerminalCard = () => {
             <span className="terminal-quote">&quot;</span>
           </p>
           <p>&nbsp;</p>
-          <p>&gt; Sean.education</p>
+          <p>&gt; sean.education</p>
           <p className="terminal-accent">
             &quot;Rutgers University–New Brunswick&quot;
           </p>
           <p>&nbsp;</p>
-          <p>&gt; Sean.languages</p>
+          <p>&gt; sean.languages</p>
           <p className="terminal-warm">
             [&quot;Java&quot;, &quot;C#&quot;, &quot;TypeScript&quot;,
             &quot;Python&quot;]

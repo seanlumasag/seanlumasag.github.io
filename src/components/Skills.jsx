@@ -1,6 +1,6 @@
 const skillGroups = [
   {
-    title: 'Languages',
+    title: 'languages',
     skills: [
       {
         name: 'Java',
@@ -40,7 +40,7 @@ const skillGroups = [
     ],
   },
   {
-    title: 'Frameworks',
+    title: 'frameworks',
     skills: [
       {
         name: 'Spring Boot',
@@ -80,7 +80,7 @@ const skillGroups = [
     ],
   },
   {
-    title: 'Tools',
+    title: 'tools',
     skills: [
       {
         name: 'PostgreSQL',
@@ -133,10 +133,10 @@ const skillGroups = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="section skills">
+    <section id="skills" className="section skills portfolio-section">
       <div className="skills-inner">
         <div className="projects-header">
-          <h2>My technical skills.</h2>
+          <h2>browse my technical skills.</h2>
         </div>
         <div className="skills-rows">
           {skillGroups.map((group) => (

@@ -24,9 +24,19 @@ function App() {
     <div className="app" id="top">
       <header className="top-nav">
         <nav className="top-nav-inner" aria-label="Primary">
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#skills">Skills</a>
+          <div className="top-nav-links">
+            <a href="#projects">projects</a>
+            <a href="#experience">experience</a>
+            <a href="#skills">skills</a>
+          </div>
+          <label className="theme-toggle" aria-label="Toggle color theme">
+            <input
+              type="checkbox"
+              checked={theme === 'dark'}
+              onChange={toggleTheme}
+            />
+            <span className="theme-slider" aria-hidden="true" />
+          </label>
         </nav>
       </header>
       <div className="page">
@@ -38,15 +48,7 @@ function App() {
       </div>
       <footer className="footer">
         <div className="footer-inner">
-          <label className="theme-toggle" aria-label="Toggle color theme">
-            <input
-              type="checkbox"
-              checked={theme === 'dark'}
-              onChange={toggleTheme}
-            />
-            <span className="theme-slider" aria-hidden="true" />
-          </label>
-          <p>© 2026 Sean Lumasag. All rights reserved.</p>
+          <p>© 2026 sean lumasag. all rights reserved.</p>
         </div>
       </footer>
     </div>

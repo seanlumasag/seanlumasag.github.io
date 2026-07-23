@@ -1,14 +1,14 @@
 const Projects = () => {
   return (
-    <section id="projects" className="section projects">
+    <section id="projects" className="section projects portfolio-section">
       <div className="projects-inner">
         <div className="projects-header">
-          <h2>Explore my projects.</h2>
+          <h2>explore my projects.</h2>
         </div>
         <div className="project-stack">
           <article className="project-card">
             <div className="project-content">
-              <h3>URL Shortener</h3>
+              <h3>url shortener</h3>
               <p>
                 Built a full-stack synchronous URL-shortening MVP with a
                 React/Vite frontend and a Java 17/Spring Boot backend using
@@ -30,7 +30,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Live Demo
+                  live site
                 </a>
                 <a
                   className="btn ghost"
@@ -38,7 +38,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  View Source
+                  view source
                 </a>
               </div>
             </div>
@@ -46,7 +46,7 @@ const Projects = () => {
 
           <article className="project-card">
             <div className="project-content">
-              <h3>Image Processor</h3>
+              <h3>image processor</h3>
               <p>
                 Built a full-stack asynchronous batch image-processing MVP
                 with a React/Vite frontend and a TypeScript/NestJS backend
@@ -67,7 +67,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Live Demo
+                  live site
                 </a>
                 <a
                   className="btn ghost"
@@ -75,7 +75,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  View Source
+                  view source
                 </a>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Projects = () => {
 
           <article className="project-card">
             <div className="project-content">
-              <h3>Live Chat</h3>
+              <h3>live chat</h3>
               <p>
                 Built a full-stack stateful messaging application with a
                 React/Vite frontend and a Java/Spring Boot backend using
@@ -105,7 +105,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Live Demo
+                  live site
                 </a>
                 <a
                   className="btn ghost"
@@ -113,7 +113,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  View Source
+                  view source
                 </a>
               </div>
             </div>

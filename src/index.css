@@ -2,6 +2,7 @@
   color-scheme: light;
   --text-primary: #1d1d1f;
   --text-secondary: #6e6e73;
+  --text-body: #515156;
   --text-muted: #6e6e73;
   --surface: #ffffff;
   --surface-alt: #f4f6f6;
@@ -32,6 +33,7 @@
   color-scheme: dark;
   --text-primary: #f8fafc;
   --text-secondary: #a1a1a6;
+  --text-body: #c7c7cc;
   --text-muted: #a1a1a6;
   --surface: #0a0a0b;
   --surface-alt: #1d1d1f;

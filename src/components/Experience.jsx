@@ -1,14 +1,17 @@
 const Experience = () => {
   return (
-    <section id="experience" className="section projects experience">
+    <section
+      id="experience"
+      className="section projects experience portfolio-section"
+    >
       <div className="projects-inner">
         <div className="projects-header">
-          <h2>View my experience.</h2>
+          <h2>view my experience.</h2>
         </div>
         <div className="project-stack">
           <article className="project-card">
             <div className="project-content">
-              <h3>Software Engineer Intern</h3>
+              <h3>software engineer intern</h3>
               <p className="experience-org">
                 <a
                   href="https://hellerindustries.com"
@@ -34,7 +37,7 @@ const Experience = () => {
           </article>
           <article className="project-card">
             <div className="project-content">
-              <h3>Software Engineer Intern</h3>
+              <h3>software engineer intern</h3>
               <p className="experience-org">
                 <a
                   href="https://devonmcguinness.com/"
@@ -59,7 +62,7 @@ const Experience = () => {
           </article>
           <article className="project-card">
             <div className="project-content">
-              <h3>Machine Learning Research Assistant</h3>
+              <h3>machine learning research assistant</h3>
               <p className="experience-org">
                 <a
                   href="https://winlab.rutgers.edu"
@@ -85,7 +88,7 @@ const Experience = () => {
           </article>
           <article className="project-card">
             <div className="project-content">
-              <h3>Software Engineer Fellow</h3>
+              <h3>software engineer fellow</h3>
               <p className="experience-org">
                 <a
                   href="https://www.linkedin.com/company/blueprint-rutgers/"
@@ -109,7 +112,7 @@ const Experience = () => {
           </article>
           <article className="project-card">
             <div className="project-content">
-              <h3>Web Development Intern</h3>
+              <h3>web development intern</h3>
               <p className="experience-org">
                 <a
                   href="https://tagonline.com"
@@ -134,7 +137,7 @@ const Experience = () => {
           </article>
           <article className="project-card">
             <div className="project-content">
-              <h3>Coding Instructor</h3>
+              <h3>coding instructor</h3>
               <p className="experience-org">
                 <a
                   href="https://www.linkedin.com/company/hadoop-express/"
