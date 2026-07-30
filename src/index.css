@@ -5,15 +5,17 @@
   --text-body: #515156;
   --text-muted: #6e6e73;
   --surface: #ffffff;
-  --surface-alt: #f4f6f6;
-  --card-bg: #f4f6f6;
+  --surface-alt: #f5f5f7;
+  --card-bg: #f5f5f7;
   --card-bg-strong: #ffffff;
-  --border: #e7e7e7;
-  --pill-bg: #e8e8ee;
+  --border: #e5e5e7;
+  --pill-bg: #ececf0;
   --accent: #0271e3;
   --accent-hover: #0a84ff;
   --button-primary: #0271e3;
   --button-primary-hover: #005bbf;
+  --skill-icon-bg: #ffffff;
+  --skill-icon-border: #dcdce1;
 
   --content-width: 660px;
   --sidebar-width: 200px;
@@ -31,20 +33,22 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --text-primary: #f8fafc;
+  --text-primary: #f5f5f7;
   --text-secondary: #a1a1a6;
   --text-body: #c7c7cc;
   --text-muted: #a1a1a6;
-  --surface: #0a0a0b;
-  --surface-alt: #1d1d1f;
+  --surface: #121214;
+  --surface-alt: #242426;
   --card-bg: #1d1d1f;
-  --card-bg-strong: #0a0a0b;
-  --border: #2a2a2c;
-  --pill-bg: #2a2a2c;
+  --card-bg-strong: #121214;
+  --border: #303034;
+  --pill-bg: #303034;
   --accent: #60a5fa;
   --accent-hover: #93c5fd;
   --button-primary: #2563eb;
   --button-primary-hover: #1d4ed8;
+  --skill-icon-bg: #f5f5f7;
+  --skill-icon-border: #d1d1d6;
 }
 
 *,

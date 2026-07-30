@@ -4,37 +4,37 @@ const skillGroups = [
     skills: [
       {
         name: 'Java',
-        meta: 'Backend',
+        meta: 'backend',
         icon: 'https://api.iconify.design/devicon/java.svg',
       },
       {
         name: 'C#',
-        meta: 'Desktop',
+        meta: 'desktop',
         icon: 'https://api.iconify.design/devicon/csharp.svg',
       },
       {
         name: 'TypeScript',
-        meta: 'Full-stack',
+        meta: 'full-stack',
         icon: 'https://api.iconify.design/devicon/typescript.svg',
       },
       {
         name: 'JavaScript',
-        meta: 'Frontend',
+        meta: 'frontend',
         icon: 'https://api.iconify.design/devicon/javascript.svg',
       },
       {
         name: 'Python',
-        meta: 'Automation',
+        meta: 'automation',
         icon: 'https://api.iconify.design/devicon/python.svg',
       },
       {
         name: 'C++',
-        meta: 'Systems',
+        meta: 'systems',
         icon: 'https://api.iconify.design/devicon/cplusplus.svg',
       },
       {
         name: 'SQL',
-        meta: 'Data',
+        meta: 'data',
         icon: 'https://api.iconify.design/vscode-icons/file-type-sql.svg',
       },
     ],
@@ -44,37 +44,37 @@ const skillGroups = [
     skills: [
       {
         name: 'Spring Boot',
-        meta: 'REST APIs',
+        meta: 'rest apis',
         icon: 'https://api.iconify.design/devicon-plain/spring.svg',
       },
       {
         name: '.NET',
-        meta: 'Enterprise',
+        meta: 'enterprise',
         icon: 'https://api.iconify.design/devicon/dotnetcore.svg',
       },
       {
         name: 'WPF',
-        meta: 'Desktop UI',
+        meta: 'desktop ui',
         icon: 'https://api.iconify.design/devicon/dotnetcore.svg',
       },
       {
         name: 'NestJS',
-        meta: 'APIs + jobs',
+        meta: 'apis + jobs',
         icon: 'https://api.iconify.design/devicon/nestjs.svg',
       },
       {
         name: 'React',
-        meta: 'Frontend UI',
+        meta: 'frontend ui',
         icon: 'https://api.iconify.design/devicon/react.svg',
       },
       {
         name: 'JPA',
-        meta: 'Persistence',
+        meta: 'persistence',
         icon: 'https://api.iconify.design/ls/jpa.svg',
       },
       {
         name: 'Prisma',
-        meta: 'TypeScript ORM',
+        meta: 'typescript orm',
         icon: 'https://api.iconify.design/devicon/prisma.svg',
       },
     ],
@@ -84,47 +84,47 @@ const skillGroups = [
     skills: [
       {
         name: 'PostgreSQL',
-        meta: 'Database',
+        meta: 'database',
         icon: 'https://api.iconify.design/devicon/postgresql.svg',
       },
       {
         name: 'Supabase',
-        meta: 'Storage',
+        meta: 'storage',
         icon: 'https://api.iconify.design/devicon/supabase.svg',
       },
       {
         name: 'Redis',
-        meta: 'Caching',
+        meta: 'caching',
         icon: 'https://api.iconify.design/devicon/redis.svg',
       },
       {
         name: 'BullMQ',
-        meta: 'Job queues',
+        meta: 'job queues',
         icon: 'https://api.iconify.design/devicon/redis.svg',
       },
       {
         name: 'Flyway',
-        meta: 'Migrations',
+        meta: 'migrations',
         icon: 'https://api.iconify.design/devicon/flyway.svg',
       },
       {
         name: 'Docker',
-        meta: 'Containers',
+        meta: 'containers',
         icon: 'https://api.iconify.design/devicon/docker.svg',
       },
       {
         name: 'Git',
-        meta: 'Versioning',
+        meta: 'versioning',
         icon: 'https://api.iconify.design/devicon/git.svg',
       },
       {
         name: 'WebSockets',
-        meta: 'Real-time',
+        meta: 'real-time',
         icon: 'https://api.iconify.design/mdi/connection.svg',
       },
       {
         name: 'STOMP',
-        meta: 'Messaging',
+        meta: 'messaging',
         icon: 'https://api.iconify.design/mdi/message-flash.svg',
       },
     ],

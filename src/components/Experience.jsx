@@ -1,3 +1,5 @@
+import ProgressiveCardStack from './ProgressiveCardStack'
+
 const Experience = () => {
   return (
     <section
@@ -8,7 +10,7 @@ const Experience = () => {
         <div className="projects-header">
           <h2>view my experience.</h2>
         </div>
-        <div className="project-stack">
+        <ProgressiveCardStack itemLabel="experience">
           <article className="project-card">
             <div className="project-content">
               <h3>software engineer intern</h3>
@@ -161,7 +163,7 @@ const Experience = () => {
               </ul>
             </div>
           </article>
-        </div>
+        </ProgressiveCardStack>
       </div>
     </section>
   )

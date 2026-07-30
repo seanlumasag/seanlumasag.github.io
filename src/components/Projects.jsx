@@ -1,3 +1,5 @@
+import ProgressiveCardStack from './ProgressiveCardStack'
+
 const Projects = () => {
   return (
     <section id="projects" className="section projects portfolio-section">
@@ -5,7 +7,7 @@ const Projects = () => {
         <div className="projects-header">
           <h2>explore my projects.</h2>
         </div>
-        <div className="project-stack">
+        <ProgressiveCardStack itemLabel="project">
           <article className="project-card">
             <div className="project-content">
               <h3>url shortener</h3>
@@ -118,7 +120,7 @@ const Projects = () => {
               </div>
             </div>
           </article>
-        </div>
+        </ProgressiveCardStack>
       </div>
     </section>
   )

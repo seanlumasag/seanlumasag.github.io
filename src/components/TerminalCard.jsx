@@ -1,3 +1,54 @@
+const contactItems = [
+  {
+    label: 'seanlumasag15@gmail.com',
+    href: 'mailto:seanlumasag15@gmail.com',
+  },
+  {
+    label: 'linkedin',
+    href: 'https://www.linkedin.com/in/seanlumasag/',
+    external: true,
+  },
+  {
+    label: 'github',
+    href: 'https://github.com/seanlumasag',
+    external: true,
+  },
+]
+
+const languageItems = ['Java', 'C#', 'TypeScript', 'Python'].map((label) => ({
+  label,
+}))
+
+const TerminalArray = ({ items, className = '' }) => (
+  <p className={`terminal-array ${className}`.trim()}>
+    <span className="terminal-array-bracket">[</span>
+    <span className="terminal-array-items">
+      {items.map((item, index) => (
+        <span className="terminal-array-item" key={item.label}>
+          <span className="terminal-quote">&quot;</span>
+          {item.href ? (
+            <a
+              className="terminal-link"
+              href={item.href}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noreferrer' : undefined}
+            >
+              {item.label}
+            </a>
+          ) : (
+            item.label
+          )}
+          <span className="terminal-quote">&quot;</span>
+          {index < items.length - 1 && (
+            <span className="terminal-array-separator">, </span>
+          )}
+        </span>
+      ))}
+    </span>
+    <span className="terminal-array-bracket">]</span>
+  </p>
+)
+
 const TerminalCard = () => {
   return (
     <section className="section terminal-section">
@@ -9,37 +60,7 @@ const TerminalCard = () => {
         </div>
         <div className="terminal-body">
           <p>&gt; sean.contact</p>
-          <p className="terminal-accent">
-            [
-            <span className="terminal-quote">&quot;</span>
-            <a className="terminal-link" href="mailto:seanlumasag15@gmail.com">
-              seanlumasag15@gmail.com
-            </a>
-            <span className="terminal-quote">&quot;</span>
-            ,{' '}
-            <span className="terminal-quote">&quot;</span>
-            <a
-              className="terminal-link"
-              href="https://www.linkedin.com/in/seanlumasag/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-            <span className="terminal-quote">&quot;</span>
-            ,{' '}
-            <span className="terminal-quote">&quot;</span>
-            <a
-              className="terminal-link"
-              href="https://github.com/seanlumasag"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-            <span className="terminal-quote">&quot;</span>
-            ]
-          </p>
+          <TerminalArray items={contactItems} className="terminal-accent" />
           <p>&nbsp;</p>
           <p>&gt; sean.resume</p>
           <p className="terminal-accent">
@@ -55,17 +76,8 @@ const TerminalCard = () => {
             <span className="terminal-quote">&quot;</span>
           </p>
           <p>&nbsp;</p>
-          <p>&gt; sean.education</p>
-          <p className="terminal-accent">
-            &quot;Rutgers University–New Brunswick&quot;
-          </p>
-          <p>&nbsp;</p>
           <p>&gt; sean.languages</p>
-          <p className="terminal-warm">
-            [&quot;Java&quot;, &quot;C#&quot;, &quot;TypeScript&quot;,
-            &quot;Python&quot;]
-          </p>
-          <p>&nbsp;</p>
+          <TerminalArray items={languageItems} className="terminal-warm" />
         </div>
       </div>
     </section>
