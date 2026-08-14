@@ -16,8 +16,12 @@
   --button-primary-hover: #005bbf;
   --skill-icon-bg: #ffffff;
   --skill-icon-border: #dcdce1;
+  --dot-color: rgba(29, 29, 31, 0.22);
+  --border-strong: #c9c9ce;
+  --card-shadow: 0 10px 30px rgba(30, 30, 34, 0.05);
+  --card-shadow-hover: 0 18px 44px rgba(30, 30, 34, 0.1);
 
-  --content-width: 660px;
+  --content-width: 680px;
   --sidebar-width: 200px;
   --sidebar-offset: calc(var(--sidebar-width) / 2);
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
@@ -49,6 +53,10 @@
   --button-primary-hover: #1d4ed8;
   --skill-icon-bg: #f5f5f7;
   --skill-icon-border: #d1d1d6;
+  --dot-color: rgba(245, 245, 247, 0.13);
+  --border-strong: #4a4a50;
+  --card-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
+  --card-shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.28);
 }
 
 *,

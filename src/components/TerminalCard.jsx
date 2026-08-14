@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const contactItems = [
   {
     label: 'seanlumasag15@gmail.com',
@@ -51,7 +53,7 @@ const TerminalArray = ({ items, className = '' }) => (
 
 const TerminalCard = () => {
   return (
-    <section className="section terminal-section">
+    <Reveal as="section" className="section terminal-section">
       <div className="terminal-card">
         <div className="terminal-bar">
           <span className="dot red" />
@@ -60,10 +62,10 @@ const TerminalCard = () => {
         </div>
         <div className="terminal-body">
           <p>&gt; sean.contact</p>
-          <TerminalArray items={contactItems} className="terminal-accent" />
+          <TerminalArray items={contactItems} />
           <p>&nbsp;</p>
           <p>&gt; sean.resume</p>
-          <p className="terminal-accent">
+          <p>
             <span className="terminal-quote">&quot;</span>
             <a
               className="terminal-link"
@@ -76,11 +78,18 @@ const TerminalCard = () => {
             <span className="terminal-quote">&quot;</span>
           </p>
           <p>&nbsp;</p>
+          <p>&gt; sean.graduation</p>
+          <p>
+            <span className="terminal-quote">&quot;</span>
+            expected december 2027
+            <span className="terminal-quote">&quot;</span>
+          </p>
+          <p>&nbsp;</p>
           <p>&gt; sean.languages</p>
-          <TerminalArray items={languageItems} className="terminal-warm" />
+          <TerminalArray items={languageItems} />
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }
 

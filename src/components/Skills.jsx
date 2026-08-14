@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const skillGroups = [
   {
     title: 'languages',
@@ -135,12 +137,17 @@ const Skills = () => {
   return (
     <section id="skills" className="section skills portfolio-section">
       <div className="skills-inner">
-        <div className="projects-header">
+        <Reveal className="projects-header">
           <h2>browse my technical skills.</h2>
-        </div>
+        </Reveal>
         <div className="skills-rows">
-          {skillGroups.map((group) => (
-            <article className="skills-row" key={group.title}>
+          {skillGroups.map((group, index) => (
+            <Reveal
+              as="article"
+              className="skills-row"
+              delay={index * 70}
+              key={group.title}
+            >
               <h3 className="skills-subtitle">{group.title}</h3>
               <div className="skills-items">
                 {group.skills.map((skill) => (
@@ -160,7 +167,7 @@ const Skills = () => {
                   </div>
                 ))}
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>

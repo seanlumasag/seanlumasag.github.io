@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { Experience, Hero, Projects, Skills, TerminalCard } from './components'
 
+const DOT_GRID_SIZE = 24
+const PARALLAX_RATE = 0.055
+
 function App() {
   const [theme, setTheme] = useState(() => {
     const stored = window.localStorage.getItem('theme')
@@ -14,6 +17,45 @@ function App() {
     document.documentElement.dataset.theme = theme
   }, [theme])
 
+  useEffect(() => {
+    const background = document.querySelector('.ambient-background')
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const compactViewport = window.matchMedia('(max-width: 700px)')
+    let animationFrame = null
+
+    const updateBackground = () => {
+      animationFrame = null
+
+      if (!background || reduceMotion.matches || compactViewport.matches) {
+        background?.style.setProperty('--parallax-offset', '0px')
+        return
+      }
+
+      const offset = (window.scrollY * PARALLAX_RATE) % DOT_GRID_SIZE
+      background.style.setProperty('--parallax-offset', `${offset}px`)
+    }
+
+    const requestUpdate = () => {
+      if (animationFrame !== null) return
+      animationFrame = window.requestAnimationFrame(updateBackground)
+    }
+
+    updateBackground()
+    window.addEventListener('scroll', requestUpdate, { passive: true })
+    reduceMotion.addEventListener('change', requestUpdate)
+    compactViewport.addEventListener('change', requestUpdate)
+
+    return () => {
+      window.removeEventListener('scroll', requestUpdate)
+      reduceMotion.removeEventListener('change', requestUpdate)
+      compactViewport.removeEventListener('change', requestUpdate)
+
+      if (animationFrame !== null) {
+        window.cancelAnimationFrame(animationFrame)
+      }
+    }
+  }, [])
+
   const toggleTheme = () => {
     const next = theme === 'dark' ? 'light' : 'dark'
     window.localStorage.setItem('theme', next)
@@ -22,6 +64,7 @@ function App() {
 
   return (
     <div className="app" id="top">
+      <div className="ambient-background" aria-hidden="true" />
       <header className="top-nav">
         <nav className="top-nav-inner" aria-label="Primary">
           <div className="top-nav-links">

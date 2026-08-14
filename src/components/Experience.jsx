@@ -1,168 +1,62 @@
 import ProgressiveCardStack from './ProgressiveCardStack'
+import Reveal from './Reveal'
+
+const experienceItems = [
+  {
+    role: 'software engineer intern',
+    organization: 'Heller Industries',
+    url: 'https://hellerindustries.com',
+  },
+  {
+    role: 'software engineer intern',
+    organization: 'Data Storytelling',
+    url: 'https://devonmcguinness.com/',
+  },
+  {
+    role: 'machine learning research assistant',
+    organization: 'WINLAB',
+    url: 'https://winlab.rutgers.edu',
+  },
+  {
+    role: 'software engineer fellow',
+    organization: 'Blueprint',
+    url: 'https://www.linkedin.com/company/blueprint-rutgers/',
+  },
+  {
+    role: 'web development intern',
+    organization: 'TAG Online',
+    url: 'https://tagonline.com',
+  },
+  {
+    role: 'coding instructor',
+    organization: 'Hadoop Express',
+    url: 'https://www.linkedin.com/company/hadoop-express/',
+  },
+]
 
 const Experience = () => {
   return (
-    <section
-      id="experience"
-      className="section projects experience portfolio-section"
-    >
+    <section id="experience" className="section projects experience portfolio-section">
       <div className="projects-inner">
-        <div className="projects-header">
+        <Reveal className="projects-header">
           <h2>view my experience.</h2>
-        </div>
+        </Reveal>
         <ProgressiveCardStack itemLabel="experience">
-          <article className="project-card">
-            <div className="project-content">
-              <h3>software engineer intern</h3>
-              <p className="experience-org">
-                <a
-                  href="https://hellerindustries.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Heller Industries
+          {experienceItems.map((item, index) => (
+            <Reveal
+              as="article"
+              className="project-card experience-card"
+              delay={index * 70}
+              key={`${item.organization}-${item.role}`}
+            >
+              <div className="experience-card-content">
+                <h3>{item.role}</h3>
+                <a href={item.url} target="_blank" rel="noreferrer">
+                  {item.organization}
                 </a>
-              </p>
-              <p>
-                Built industrial software features for oven configuration
-                ingestion, thermal-profile analysis, and statistical process
-                control in a C#/.NET WPF codebase.
-              </p>
-              <ul className="project-tech">
-                <li>C#</li>
-                <li>.NET Framework</li>
-                <li>WPF</li>
-                <li>JSON</li>
-                <li>CSV</li>
-              </ul>
-            </div>
-          </article>
-          <article className="project-card">
-            <div className="project-content">
-              <h3>software engineer intern</h3>
-              <p className="experience-org">
-                <a
-                  href="https://devonmcguinness.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Data Storytelling
-                </a>
-              </p>
-              <p>
-                Extended transaction, winner, and buyer-verification workflows
-                for a React/TypeScript nonprofit raffle platform using
-                Supabase and an existing PayPal checkout integration.
-              </p>
-              <ul className="project-tech">
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>Supabase</li>
-                <li>PayPal</li>
-              </ul>
-            </div>
-          </article>
-          <article className="project-card">
-            <div className="project-content">
-              <h3>machine learning research assistant</h3>
-              <p className="experience-org">
-                <a
-                  href="https://winlab.rutgers.edu"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  WINLAB
-                </a>
-              </p>
-              <p>
-                Assisted with machine-learning experiments exploring adaptive
-                request routing between local and edge models based on accuracy
-                and compute tradeoffs.
-              </p>
-              <ul className="project-tech">
-                <li>Python</li>
-                <li>PyTorch</li>
-                <li>CIFAR-10</li>
-                <li>AlexNet</li>
-                <li>Machine Learning</li>
-              </ul>
-            </div>
-          </article>
-          <article className="project-card">
-            <div className="project-content">
-              <h3>software engineer fellow</h3>
-              <p className="experience-org">
-                <a
-                  href="https://www.linkedin.com/company/blueprint-rutgers/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Blueprint
-                </a>
-              </p>
-              <p>
-                Completed a project-based Rutgers software-engineering
-                accelerator focused on practical software development,
-                technical collaboration, and internship preparation.
-              </p>
-              <ul className="project-tech">
-                <li>Software Engineering</li>
-                <li>Team Collaboration</li>
-                <li>Project Development</li>
-              </ul>
-            </div>
-          </article>
-          <article className="project-card">
-            <div className="project-content">
-              <h3>web development intern</h3>
-              <p className="experience-org">
-                <a
-                  href="https://tagonline.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  TAG Online
-                </a>
-              </p>
-              <p>
-                Developed and improved client website pages, migrated legacy
-                sites to WordPress, and worked with senior developers on
-                frontend implementation and performance.
-              </p>
-              <ul className="project-tech">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>WordPress</li>
-              </ul>
-            </div>
-          </article>
-          <article className="project-card">
-            <div className="project-content">
-              <h3>coding instructor</h3>
-              <p className="experience-org">
-                <a
-                  href="https://www.linkedin.com/company/hadoop-express/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Hadoop Express
-                </a>
-              </p>
-              <p>
-                Taught Python, block-based coding, robotics, and STEM concepts
-                through structured lessons and more than 50 hands-on exercises
-                for student groups.
-              </p>
-              <ul className="project-tech">
-                <li>Python</li>
-                <li>Block Coding</li>
-                <li>LEGO WeDo</li>
-                <li>LEGO EV3</li>
-                <li>Raspberry Pi</li>
-              </ul>
-            </div>
-          </article>
+              </div>
+            </Reveal>
+          ))}
         </ProgressiveCardStack>
       </div>
     </section>

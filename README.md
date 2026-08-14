@@ -3,11 +3,11 @@
 A fast, minimal portfolio site that highlights backend-focused software engineering work, selected projects, and skills with a clean terminal-inspired UI.
 
 ## Highlights
-- Terminal-inspired hero and profile card with contact + resume links.
-- Projects and experience sections built as reusable cards.
-- Animated type effects with reduced-motion support.
-- Scroll-based reveal animations.
-- Responsive layout with a persistent side nav for quick section jumps.
+- Terminal-inspired hero and profile card with contact, education, and resume links.
+- Screenshot-led project cards with live demos, source links, and concise tech stacks.
+- Minimal experience cards and a responsive technical-skills grid.
+- Subtle dotted parallax and scroll reveals with reduced-motion support.
+- Responsive light and dark themes with quick section navigation.
 
 ## Tech Stack
 - React 19
