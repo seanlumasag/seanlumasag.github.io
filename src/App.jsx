@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { Experience, Hero, Projects, Skills, TerminalCard } from './components'
+import { Hero, Projects, TerminalCard } from './components'
 
 const DOT_GRID_SIZE = 24
 const PARALLAX_RATE = 0.055
@@ -65,13 +65,8 @@ function App() {
   return (
     <div className="app" id="top">
       <div className="ambient-background" aria-hidden="true" />
-      <header className="top-nav">
-        <nav className="top-nav-inner" aria-label="Primary">
-          <div className="top-nav-links">
-            <a href="#projects">projects</a>
-            <a href="#experience">experience</a>
-            <a href="#skills">skills</a>
-          </div>
+      <header className="site-header">
+        <div className="site-header-inner">
           <button
             className="theme-toggle"
             type="button"
@@ -90,14 +85,12 @@ function App() {
               </svg>
             )}
           </button>
-        </nav>
+        </div>
       </header>
       <div className="page">
         <Hero />
         <TerminalCard />
         <Projects />
-        <Experience />
-        <Skills />
       </div>
       <footer className="footer">
         <div className="footer-inner">

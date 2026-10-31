@@ -16,9 +16,9 @@ const Hero = () => {
           </span>
           <span>swe intern @ heller industries</span>
         </p>
-        <p>i am a software engineer who builds backend systems.</p>
+        <p>i am a software engineer who builds backend systems</p>
         <p>
-          check out my <a href="#projects">projects</a> below.
+          check out my <a href="#projects">projects</a> below
         </p>
       </Reveal>
     </section>
